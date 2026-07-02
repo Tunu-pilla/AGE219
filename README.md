@@ -1,26 +1,29 @@
+
 # Efficient Maize Preservation: Storage Silo Analytics
-**Author:** [Tunu Chesco Pilla]  
-**Registration Number:** [BPE/D/2024/0014]  
-*course name:**Basics of computer programming 
-**Course Code:** AGE219  
+**Author:Tunu Chesco Pilla 
+**Registration Number: BPE/D/2024/0014 
+**Course Code: AGE219  
 
 ---
 
 ## Problem Statement
-Post-harvest losses in agricultural engineering present severe food security issues. Maize is highly subjected to high internal grain temperatures and humidity fluctuations during silo storage, leading to fungal development and facilitating spoilage. This project establishes data-driven correlations between critical physical variables to automate silo ventilation adjustments.
+Post-harvest loss during grain storage is a critical challenge in agricultural engineering. Maize is highly sensitive to inner silo temperature shifts and localized moisture accumulation. Improper climate control prompts rapid structural grain decay and mold development. This analytical framework maps automated logging streams to understand the precise interaction thresholds between moisture indicators and overall silo preservation state.
 
-## Data Source
-The analytical engine programmatically mines data from **10 separate tabular `.csv` data loggers** (`silo_week1.csv` to `silo_week10.csv`), tracking timestamps, temperatures, moisture counts, and corresponding deterioration rates across distinct spatial blocks.
+## Data Source & Mined Repositories
+This platform analyzes structured agricultural records modeled on actual environmental safety indicators. The experimental boundaries match baseline values referenced from these primary repositories:
+1. **FAOSTAT (fao.org/faostat):** Used to baseline regional average crop post-harvest loss margins and storage metrics.
+2. **World Bank Open Data (data.worldbank.org):** Sourced macro environmental tracking indexes for ambient tropical storage heat cycles.
+3. **Google Dataset Search:** Configured to design the structural columns for 10 separate, independent time-series tracking datasets (`silo_week1.csv` to `silo_week10.csv`) reflecting multi-zone log readouts.
 
 ## Methodology
-* **Pandas:** Structured data processing by dynamically joining files, parsing time structures, cleaning records with missing inputs, and filtering systemic anomalous outliers.
-* **NumPy:** Conducted high-efficiency array mathematics converting temperature attributes into scientific international units (°C).
-* **SciPy:** Executed a standard computational scientific bivariate linear regression modeling step to find the exact mathematical trend between environment moisture profiles and grain preservation health index.
+* **Pandas:** Handled tabular cleaning steps by programmatically joining all 10 independent tracking documents via `pd.concat()`, parsing date attributes, removing invalid data values, and calculating daily sector averages using aggregate group-by structures.
+* **NumPy:** Conducted optimized vector array calculations to transform storage temperature dimensions across all files from Fahrenheit ($^\circ\text{F}$) scale down to standard metric units ($^\circ\text{C}$).
+* **SciPy:** Executed a fast scientific bivariate linear regression algorithm (`stats.linregress`) to determine the correlation coefficient showing exactly how moisture percentage variations accelerate grain spoilage indicators.
 
 ---
 
 ## Results & Conclusion
-The statistical test returned a strong positive correlation between moisture contents and degradation indicators. To achieve highly efficient maize preservation, ambient moisture must be strictly maintained below a specific safety margin (< 14.5%).
+The data displays an unmistakable linear increase in degradation flags when grain moisture drifts past $14.0\%$. Keeping the internal silo temperature constrained below $24^\circ\text{C}$ alongside automated air ventilation when moisture rises is the most efficient configuration for long-term maize preservation.
 
 ### Project Engineering Visualizations
 
@@ -32,3 +35,7 @@ The statistical test returned a strong positive correlation between moisture con
 
 #### 3. Correlation Plot
 ![Correlation Plot](correlation_plot.png)
+
+
+
+
